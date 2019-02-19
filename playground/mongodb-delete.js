@@ -52,7 +52,7 @@ MongoClient.connect('mongodb://localhost:27017', {useNewUrlParser: true}, (err, 
     //     console.log(result);
     // });
 
-    db.collection('Users').deleteOne({_id: new ObjectID('5c6b103e9175e172318c0d1e')}).then((result) =>{
+    db.collection('Users').findOneAndDelete({_id: new ObjectID('5c6b103e9175e172318c0d1e')}).then((result) =>{
         console.log(result);
     });
 
